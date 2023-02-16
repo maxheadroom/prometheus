@@ -9,7 +9,8 @@ LABEL org.opencontainers.image.authors="https://falko.zurell.de/contact" \
 	  org.opencontainers.image.title="prometheus" \
 	  org.opencontainers.image.version="2.42.0"
 
-
+RUN mkdir -p /var/lib/apt/lists/partial
+RUN mkdir -p /var/cache/apt/archives
 RUN apt-get update 
 RUN apt-get upgrade -y 
 RUN apt-get install -y curl 
