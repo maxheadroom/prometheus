@@ -10,7 +10,10 @@ LABEL org.opencontainers.image.authors="https://falko.zurell.de/contact" \
 	  org.opencontainers.image.version="2.42.0"
 
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y curl && \
-apt-get clean && rm -rf /var/lib/apt/lists /var/cache/apt/archives
+RUN apt-get update 
+RUN apt-get upgrade -y 
+RUN apt-get install -y curl 
+RUN apt-get clean 
+RUN rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 HEALTHCHECK CMD curl -f http://localhost:9090/
