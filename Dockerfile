@@ -16,5 +16,5 @@ RUN apt-get upgrade -y
 RUN apt-get install -y curl 
 RUN apt-get clean 
 RUN rm -rf /var/lib/apt/lists /var/cache/apt/archives
-
+USER 1001
 HEALTHCHECK CMD curl -f http://localhost:9090/
