@@ -13,4 +13,4 @@ LABEL org.opencontainers.image.authors="https://falko.zurell.de/contact" \
 RUN apt-get update && apt-get upgrade -y && apt-get install -y curl && \
 apt-get clean && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
-HEALTHCHECK [OPTIONS] CMD curl -f http://localhost:9090/
+HEALTHCHECK CMD curl -f http://localhost:9090/
